@@ -1,6 +1,7 @@
 // Cart.js
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom';
 import '../../Styles/Cart.css'
 
 const Cart = ({ cartItems }) => {
@@ -58,9 +59,11 @@ const Cart = ({ cartItems }) => {
             <h2>Resumen de compra:</h2>
             <p>Cantidad de Productos: {totalItems}</p>
             <p>Total a Pagar: ${totalPrice.toFixed(2)}</p>
-            <button className="btn btn-primary" >
-            Continuar Comprando
-            </button>
+            <Link to="/checkout-page">
+                <button className="btn btn-primary" >
+                Continuar Comprando
+                </button>
+            </Link>
         </div>
       </div>
     </div>

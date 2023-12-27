@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Components/Navbar/Navbar';
 import Home from './Pages/Home/Home';
 import Cart from './Components/Cart/Cart';
+import ChejoutPage from './Pages/Checkout/ChejoutPage';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -27,6 +28,7 @@ const App = () => {
       <Routes>
         <Route path="" element={<Home cartItems={cartItems} handleAddToCart={handleAddToCart}/>}/>
         <Route path="/cart" element={<Cart cartItems={cartItems}/>} />
+        <Route path="/checkout-page" element={<ChejoutPage />} />
       </Routes>
       {/* <Home cartItems={cartItems} handleAddToCart={handleAddToCart}/>
       <Cart cartItems={cartItems}/> */}
