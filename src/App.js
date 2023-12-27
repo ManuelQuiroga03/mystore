@@ -9,7 +9,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const App = () => {
   const [cartItems, setCartItems] = useState([]);
   const handleAddToCart = (product) => {
-    setCartItems([...cartItems, product]);
+    const existingProduct = cartItems.find((item) => item.id === product.id);
+
+    if (existingProduct) {
+      const updatedCartItems = cartItems.map((item) =>
+        item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+      );
+      setCartItems(updatedCartItems);
+    } else {
+      const newCartItem = { ...product, quantity: 1 };
+      setCartItems([...cartItems, newCartItem]);
+    }
   }
   return (
     <Router>

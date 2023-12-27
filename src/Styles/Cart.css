@@ -1,0 +1,39 @@
+ul{
+    flex-direction: column;
+}
+
+.item-cart__asset{
+    height: 64px;
+    margin-right: 24px;
+    width: 64px;
+    border-radius: 4px;
+}
+
+.item-cart__info{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.item-cart__info
+.item-title{
+    font-size: 14px;
+    line-height: 1.25;
+}
+
+.item-cart__actions{
+    margin-top: 0;
+}
+
+.link-action{
+    display: flex;
+    flex-direction: row;
+}
+
+.link{
+    margin: 0;
+    padding: 0 10px;
+}
+
+.link:first-child{
+    padding-left: 0px;
+}
