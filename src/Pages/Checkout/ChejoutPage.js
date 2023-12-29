@@ -1,14 +1,13 @@
 // CheckoutPage.js
 import React from 'react';
-import Checkout from '../../Components/Checkout/Checkout'; // Asegúrate de importar correctamente el componente
+import Checkout from '../../Components/Checkout/Checkout';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const CheckoutPage = () => {
   return (
-    <div>
-      <h1>Checkout Page</h1>
-      {/* Aquí renderizamos el componente Checkout */}
+    <div className='container'>
       <Checkout />
-      {/* Otros elementos o información relacionada con la página de checkout */}
     </div>
   );
 };

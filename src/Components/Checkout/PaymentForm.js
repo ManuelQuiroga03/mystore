@@ -1,5 +1,7 @@
 import React, { useState, useRef } from 'react';
 import '../../Styles/PaymentForm.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const PaymentForm = () => {
     const [number, setNumber] = useState("");
