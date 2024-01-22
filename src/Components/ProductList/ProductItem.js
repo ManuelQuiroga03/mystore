@@ -10,8 +10,7 @@ import "../../Styles/Products.css";
 // import { Link } from "react-router-dom";
 
 const ProductItem = ({ product, handleAddToCart }) => {
-  const { id, title, price, description, images, category } = product;
-
+  const { id, title, price, description, image, category } = product;
   const addToCart = () => {
     handleAddToCart(product);
   };
@@ -19,12 +18,12 @@ const ProductItem = ({ product, handleAddToCart }) => {
   return (
     // <Link to={{ pathname: `/product/${id}`, state: { product } }} className="product-link" >
     <div className="product-card">
-      <img src={images[0]} alt={title} className="card-img-top" />
+      <img src={product.image} alt='img' className="card-img-top" />
       <div className="product-details">
         <h5 className="card-text-title">{title}</h5>
         <p className="card-text">{description}</p>
         <p className="card-text">Price: ${price}</p>
-        <p className="card-text">{category.name}</p>
+        <p className="card-text">{category}</p>
       </div>
       <div className="button-container">
         <button className="btn btn-primary">

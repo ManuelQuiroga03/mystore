@@ -67,18 +67,18 @@ return (
             <div key={index} class="row border-top border-bottom">
                 <div class="row main align-items-center">
                 <div class="col-2">
-                    <img class="img-fluid" src={item.images[0]} alt="" />
+                    <img class="img-fluid" src={item.image} alt="" />
                 </div>
                 <div class="col">
                     <div class="row text-muted">{item.title}</div>
                     <div class="row card-text">{item.description}</div>
                 </div>
                 <div class="col">
-                    <a href="#">-</a>
-                    <a href="#" class="border">
+                    <a href="/">-</a>
+                    <a href="/" class="border">
                     {item.quantity}
                     </a>
-                    <a href="#">+</a>
+                    <a href="/">+</a>
                 </div>
                 <div class="col">
                     $ {item.price} <span class="close">&#10005;</span>
