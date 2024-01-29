@@ -56,7 +56,7 @@ const ProductList = ({ cartItems,handleAddToCart }) => {
 
   return (
     <div>
-      <h2>Product List</h2>
+      {/* <h2>Product List</h2> */}
       <ProductFilter 
         categories={categories}
         selectedCategory={selectedCategory}
