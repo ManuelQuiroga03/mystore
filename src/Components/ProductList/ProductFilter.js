@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../../Styles/ProductFilter.css"
 
 const ProductFilter = ({ categories, selectedCategory, onCategoryChange, onFilterChange,onPriceFilterChange }) => {
   const [filter, setFilter] = useState("");
@@ -46,7 +47,7 @@ const ProductFilter = ({ categories, selectedCategory, onCategoryChange, onFilte
   };
 
   return (
-    <div className="product-filter">
+    <div className="container product-filter">
       <input
         type="text"
         value={filter}

@@ -130,7 +130,10 @@ return (
             <div class="col">TOTAL PRICE</div>
             <div class="col text-right">$ {finalTotalPrice} </div>
         </div>
-        <button class="btn">CHECKOUT</button>
+        <Link to="/checkout-page" className="btn">
+            CHECKOUT
+        </Link>
+        {/* <button class="btn">CHECKOUT</button> */}
         </div>
     </div>
     </div>
