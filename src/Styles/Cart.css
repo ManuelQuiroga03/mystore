@@ -121,7 +121,7 @@ input:focus::-webkit-input-placeholder
       color:transparent;
 }
 .btn{
-    background-color: #000;
+    /* background-color: #000; */
     border-color: #000;
     color: white;
     width: 100%;
