@@ -18,7 +18,7 @@ const ProductItem = ({ product, handleAddToCart }) => {
   return (
     // <Link to={{ pathname: `/product/${id}`, state: { product } }} className="product-link" >
     <div className="product-card">
-      <img src={product.image} alt='img' className="card-img-top" />
+      <img src={image} alt='img' className="card-img-top" />
       <div className="product-details">
         <h5 className="card-text-title">{title}</h5>
         <p className="card-text">{description}</p>

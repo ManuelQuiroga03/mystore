@@ -124,7 +124,7 @@ const PaymentForm = () => {
         </div>
 
         <div className="col-md-4">
-          <div className="card card-blue p-3 text-white mb-3">
+          <div className="card p-3 text-white mb-3">
             
           </div>
           <div className="mt-4 mb-4 d-flex">

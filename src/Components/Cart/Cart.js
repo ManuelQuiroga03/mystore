@@ -74,11 +74,11 @@ return (
                     <div class="row card-text">{item.description}</div>
                 </div>
                 <div class="col">
-                    <a href="/">-</a>
-                    <a href="/" class="border">
-                    {item.quantity}
+                    <a className="a-cart" href="/">-</a>
+                    <a className="a-cart" href="/" >
+                        {item.quantity}
                     </a>
-                    <a href="/">+</a>
+                    <a className="a-cart" href="/">+</a>
                 </div>
                 <div class="col">
                     $ {item.price} <span class="close">&#10005;</span>
@@ -88,7 +88,7 @@ return (
             ))}
         </div>
         <div class="back-to-shop">
-            <a href="/">
+            <a className="a-cart" href="/">
                 <FontAwesomeIcon icon={faArrowLeft} />
             </a>
             <span class="text-muted">Back to shop</span>
