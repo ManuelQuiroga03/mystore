@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Navbar from './Components/Navbar/Navbar';
 import Home from './Pages/Home/Home';
 import Cart from './Components/Cart/Cart';
@@ -20,6 +22,15 @@ const App = () => {
     } else {
       const newCartItem = { ...product, quantity: 1 };
       setCartItems([...cartItems, newCartItem]);
+      toast.success('Product added to cart', {
+        position: "top-right",
+        autoClose: 2000, // Cerrar automáticamente después de 3 segundos
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     }
   }
   return (
@@ -32,6 +43,7 @@ const App = () => {
       </Routes>
       {/* <Home cartItems={cartItems} handleAddToCart={handleAddToCart}/>
       <Cart cartItems={cartItems}/> */}
+      <ToastContainer />
     </Router>
   );
 };
