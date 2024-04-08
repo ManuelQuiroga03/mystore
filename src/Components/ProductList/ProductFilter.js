@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "../../Styles/ProductFilter.css"
 
-const ProductFilter = ({ categories, selectedCategory, onCategoryChange, onFilterChange,onPriceFilterChange }) => {
-  const [filter, setFilter] = useState("");
-  const [priceRange, setPriceRange] = useState("");
+  const ProductFilter = ({ categories, selectedCategory, onCategoryChange, onFilterChange,onPriceFilterChange }) => {
+    const [filter, setFilter] = useState("");
+    const [priceRange, setPriceRange] = useState("");
 
-  const handleFilterChange = (event) => {
-    setFilter(event.target.value);
-    onFilterChange(event.target.value);
+    const handleFilterChange = (event) => {
+      setFilter(event.target.value);
+      onFilterChange(event.target.value);
   };
 
   const handleCategoryChange = (event) => {
@@ -49,14 +49,15 @@ const ProductFilter = ({ categories, selectedCategory, onCategoryChange, onFilte
   return (
     <div className="container product-filter">
       <input
+        style={{"border-radius":"5px"}}
         type="text"
         value={filter}
-        placeholder="Buscar por nombre..."
+        placeholder="Search..."
         onChange={handleFilterChange}
       />
 
-      <select value={selectedCategory} onChange={handleCategoryChange}>
-        <option value="">Todas las categorías</option>
+      <select value={selectedCategory} onChange={handleCategoryChange} style={{"border-radius":"5px"}}>
+        <option value="">All categories</option>
         {categories.map((category) => (
           <option key={category} value={category}>
             {category}
@@ -64,12 +65,12 @@ const ProductFilter = ({ categories, selectedCategory, onCategoryChange, onFilte
         ))}
       </select>
 
-      <select value={priceRange} onChange={handlePriceRangeChange}>
-        <option value="">Todos los precios</option>
-        <option value="lt15">Menos de 15</option>
-        <option value="16to50">16 - 50</option>
-        <option value="51to100">51 - 100</option>
-        <option value="gt100">Más de 100</option>
+      <select value={priceRange} onChange={handlePriceRangeChange} style={{"border-radius":"5px"}}>
+        <option value="">All prices</option>
+        <option value="lt15">Less $15</option>
+        <option value="16to50">$16 - $50</option>
+        <option value="51to100">$51 - $100</option>
+        <option value="gt100">More than $100</option>
       </select>
     </div>
   );

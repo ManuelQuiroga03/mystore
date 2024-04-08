@@ -27,13 +27,13 @@ const ProductItem = ({ product, handleAddToCart }) => {
       </div>
       <div className="button-container">
         <button className="btn btn-primary">
-          <FontAwesomeIcon icon={faEye} /> Ver
+          <FontAwesomeIcon icon={faEye} /> View
         </button>
         <button className="btn btn-success" onClick={addToCart}>
-          <FontAwesomeIcon icon={faShoppingCart} /> Carrito
+          <FontAwesomeIcon icon={faShoppingCart} /> Cart
         </button>
         <button className="btn btn-info">
-          <FontAwesomeIcon icon={faShoppingBag} className="buy-icon" /> Comprar
+          <FontAwesomeIcon icon={faShoppingBag} className="buy-icon" /> Buy
         </button>
       </div>
     </div>
