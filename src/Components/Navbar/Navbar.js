@@ -12,15 +12,15 @@ const Navbar = ({handleAddToCart, cartItems}) => {
             <div className="container">
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li><Link to="/">Home</Link></li>
-                    <li><a href="/productos">Productos</a></li>
-                    <li><a href="/contacto">Contacto</a></li>
-                    <li>
-                    <Link to="/cart">
-                        <FontAwesomeIcon icon={faShoppingCart} />
-                        {/* <span className="numCart">{cartItems.reduce((total, item) => total + item.quantity, 0)}</span> */}
-                    </Link>
-                    </li>
+                        <li><Link to="/" className="link">Home</Link></li>
+                        <li><Link to="/productos" className="link">Productos</Link></li>
+                        <li><Link href="/contacto" className="link">Contacto</Link></li>
+                        <li>
+                        <Link to="/cart" className="link" id="hire-me">
+                            <FontAwesomeIcon icon={faShoppingCart} />
+                            {/* <span className="numCart">{cartItems.reduce((total, item) => total + item.quantity, 0)}</span> */}
+                        </Link>
+                        </li>
                     </ul>
                 </div>
             </div>
